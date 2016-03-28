@@ -1,0 +1,28 @@
+group 'learn-cpp'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'cpp'
+
+/*
+model {
+    main(NativeExecutableSpec) {
+        binaries.all {
+            // lib library: "hello"
+
+        }
+    }
+} */
+
+
+
+model {
+    components{
+        main(NativeExecutableSpec)
+    }
+}
+
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.7'
+}
