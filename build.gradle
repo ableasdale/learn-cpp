@@ -2,6 +2,9 @@ group 'learn-cpp'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'cpp'
+//apply plugin: 'application'
+apply plugin: 'google-test'
+
 
 /*
 model {
@@ -19,7 +22,17 @@ model {
     components{
         main(NativeExecutableSpec)
     }
+
+    testSuites {
+        main {
+            sources {
+                cpp.source.srcDir 'src/main/test/cpp'
+            }
+        }
+    }
 }
+
+
 
 
 
